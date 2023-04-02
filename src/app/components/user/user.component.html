@@ -1,4 +1,5 @@
 <div class="card">
+  <div class="card-delete" (click)="onDelete(user.id)">✕</div>
   <img [src]="user.image" alt="" />
   <h4 class="card-name">{{ user.firstName }} {{ user.lastName }}</h4>
   <p>SCORE</p>

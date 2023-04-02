@@ -43,4 +43,9 @@ export class UserService {
   getUser(id: number) {
     return this.users.find((user) => user.id === +id);
   }
+
+  deleteUser(id: number) {
+    this.users = this.users.filter((user) => user.id !== id);
+    this.users$.next(this.users);
+  }
 }
