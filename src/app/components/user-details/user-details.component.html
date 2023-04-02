@@ -1,0 +1,22 @@
+<div class="main">
+  <mat-card>
+    <mat-card-actions class="main__header">
+      <button mat-stroked-button color="warn" (click)="onBack()">Back</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <div class="main__cards">
+    <div class="main__card">
+      <img [src]="user.image" alt="" />
+      <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+      <div>
+        <p>score</p>
+        <p>{{ user.score }}</p>
+      </div>
+      <div>
+        <p>income</p>
+        <p>{{ user.income }} EUR</p>
+      </div>
+    </div>
+  </div>
+</div>
