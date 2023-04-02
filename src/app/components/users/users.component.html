@@ -1,0 +1,62 @@
+<div class="main">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <mat-card>
+      <mat-card-actions class="main__header">
+        <button mat-stroked-button color="warn" type="submit">Add New</button>
+        <button mat-raised-button color="warn">Save</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-toolbar>
+      <div class="main__form">
+        <input
+          type="text"
+          placeholder="Fist Name"
+          formControlName="firstName"
+        />
+        <input type="text" placeholder="Last Name" formControlName="lastName" />
+        <div class="main__form__wrapper">
+          <input
+            type="number"
+            placeholder="Income"
+            class="main__form__wrapper-income"
+            formControlName="income"
+          />
+          <p>EUR</p>
+        </div>
+        <label for="files" class="btn">File Upload</label>
+        <input
+          id="files"
+          style="display: none"
+          type="file"
+          formControlName="image"
+          (change)="onFileSelected($event)"
+        />
+      </div>
+    </mat-toolbar>
+  </form>
+
+  <div class="main__tools">
+    <div class="main__tools-left">
+      <div>SUNNY +30 BEST</div>
+
+      <div class="search">
+        <mat-icon class="search-icon" fontIcon="search"></mat-icon>
+        <input class="search-input" type="text" placeholder="Search By Name" />
+      </div>
+    </div>
+
+    <select class="dropdown" name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+
+  <div class="main__users">
+    <ng-container *ngFor="let user of users$ | async">
+      <app-user [user]="user" (click)="onUser(user)"></app-user>
+    </ng-container>
+  </div>
+</div>

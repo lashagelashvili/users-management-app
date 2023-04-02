@@ -1,0 +1,77 @@
+$orange-text: #f44336
+
+input
+  border: 1px solid #ccc
+  padding: 5px
+  border-radius: 5px
+
+.main
+  &__header
+    justify-content: space-between
+
+  &__form
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    column-gap: 10px
+
+    &__wrapper
+      position: relative
+      display: flex
+
+      input
+        border-right: none !important
+        border-radius: 5px 0px 0px 5px !important
+
+      &-income
+        width: 100%
+        max-width: calc(100% - 40px)
+
+      p
+        font-size: 14px
+        font-family: initial
+        border: 1px solid #ccc
+        border-radius: 5px
+        padding: 0px 5px
+        margin: 0
+        border-radius: 0px 5px 5px 0px
+
+    label
+      border-radius: 5px
+      font-size: 16px
+      color: $orange-text
+      border: 1px solid $orange-text
+      text-align: center
+      font-family: initial
+
+  &__tools
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 15px
+
+    &-left
+      display: flex
+      align-items: center
+
+    .search
+      position: relative
+
+      &-input
+        text-align: center
+        padding: 10px 35px 10px 5px
+
+      &-icon
+        position: absolute
+        right: 5px
+        top: 50%
+        transform: translateY(-50%)
+
+  &__users
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    justify-items: center
+    padding-inline: 50px
+
+  .dropdown
+    padding: 10px 20px
