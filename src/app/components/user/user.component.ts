@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { User } from 'src/app/services/model';
 
 @Component({
   selector: 'app-user',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./user.component.sass'],
 })
 export class UserComponent {
-  @Input() user: any;
+  @Input() user!: User;
 }
