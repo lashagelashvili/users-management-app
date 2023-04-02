@@ -4,5 +4,5 @@
   <p>SCORE</p>
   <p>{{ user.income }}</p>
 
-  <button class="card-open">OPEN</button>
+  <button class="card-open" [routerLink]="['/user', user.id]">OPEN</button>
 </div>
