@@ -15,7 +15,12 @@ import { UserComponent } from './components/user/user.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, UserComponent, UserDetailsComponent],
+  declarations: [
+    AppComponent,
+    UsersComponent,
+    UserComponent,
+    UserDetailsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
